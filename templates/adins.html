@@ -1,0 +1,18 @@
+<!-- ADD INSTRUCTOR PAGE -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<section class="body1">
+	<form method="post">
+		{% csrf_token %}
+		<fieldset>
+			<h1 class="tablink" onclick="openPage('new')" id="defaultOpen">Add Instructor</h1>
+			<a href="{% url 'editinstructor' %}"><h1 class="tablink" onclick="openPage('edit')" id="link_to_edit">Edit Instructor</h1></a>
+			<div class="tabcontent" id="new">
+				{{ form.as_p }}
+			<input type="submit" value="Submit" class="submit">
+			</div>
+		</fieldset>
+	</form>
+</section>
+{% endblock %}

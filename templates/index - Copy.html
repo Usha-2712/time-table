@@ -1,0 +1,289 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<!-- <div class="inner">
+	<div class="vec">
+		<div class="img">
+		<img src="{% static 'img/vect.jpg' %}">
+		</div>
+		<a href="https://www.freepik.com/free-photos-vectors/calendar">Time-table vector created by stories - www.freepik.com</a>
+		 </div>
+</div> -->
+<!-- <div class="card">
+	<div class="txt">
+		<h2>Timetable Generator</h2>
+		<p>Let our Artificial Intelligence schedule your classes.
+		Add your university class details and generate Time Table.</p>
+	</div>
+	<div class="crdbtn">
+		<a href="{% url 'timetable' %}" class="btn">Generate Timetable</a>
+
+	</div>
+	
+</div> -->
+<section class="total">
+
+
+<section class="section1">
+	<div class="container container1">
+		<div class="row">
+			<div class="col-lg-5 ">
+				<div class="section1_content">
+					<h2>TimeTable Generator</h2>
+				<p>Let our Artificial Intelligence schedule your classes.
+					</p>
+					<a href="{% url 'timetable' %}" className="bn5"><button class="button"> Generate</button></a>
+					
+					<!-- <button class="btn btn-animate"> <a href="{% url 'timetable' %}" className="bn5">Generate</a>
+					</button> -->
+						
+					
+				</div>
+				
+			</div>
+			<div align:center class="col-lg-7 homepage_img">
+					<img src="{% static 'img/calendarnew.png' %}">
+			</div>
+		</div>
+	
+	</div>
+</section>
+<!-- <section id="#section2">
+	<div class="container container_Sec2">
+		<div class="rightbox">
+		  <div class="rb-container">
+			<ul class="rb">
+			  <li class="rb-item" ng-repeat="itembx">
+				<div class="timestamp">
+				  3rd May 2020<br> 7:00 PM
+				</div>
+				<div class="item-title">Chris Serrano posted a photo on your wall.</div>
+	  
+			  </li>
+			  <li class="rb-item" ng-repeat="itembx">
+				<div class="timestamp">
+				  19th May 2020<br> 3:00 PM
+				</div>
+				<div class="item-title">Mia Redwood commented on your last post.</div>
+	  
+			  </li>
+	  
+			  <li class="rb-item" ng-repeat="itembx">
+				<div class="timestamp">
+				  17st June 2020<br> 7:00 PM
+				</div>
+				<div class="item-title">Lucas McAlister just send you a message.</div>
+	  
+			  </li>
+	  
+			</ul>
+	  
+		  </div>
+		</div>
+	  </div>
+</section> -->
+<section class="section2">
+	<div data-aos="fade-up" data-aos-duration="1000">
+	<div class="section2_content">
+		<h2>Steps to be followed</h2>
+	</div>
+	<ul class="timeline">
+
+		<!-- Item 1 -->
+		<li>
+			<div class="direction-r">
+				<div class="flag-wrapper">
+					<span class="flag">Instructor</span>
+					<span class="time-wrapper"><span class="time">step1</span></span>
+				</div>
+				<div class="desc">Add Instructor Name along with Id</div>
+			</div>
+		</li>
+	  
+		<!-- Item 2 -->
+		<li>
+			<div class="direction-l">
+				<div class="flag-wrapper">
+					<span class="flag">Rooms</span>
+					<span class="time-wrapper"><span class="time">step2</span></span>
+				</div>
+				<div class="desc">Add Room number along with Room capacity</div>
+			</div>
+		</li>
+	
+		<!-- Item 3 -->
+		<li>
+			<div class="direction-r">
+				<div class="flag-wrapper">
+					<span class="flag">Meeting time</span>
+					<span class="time-wrapper"><span class="time">step3</span></span>
+				</div>
+				<div class="desc">Add Meeting Time with Id,timeslot and day</div>
+			</div>
+		</li>
+		<!-- Item 4 -->
+		<li>
+			<div class="direction-l">
+				<div class="flag-wrapper">
+					<span class="flag">Course</span>
+					<span class="time-wrapper"><span class="time">step4</span></span>
+				</div>
+				<div class="desc">Add course Name along with course Id and also Instructor of that course from below displayed Instructors</div>
+			</div>
+		</li>
+	  
+		<!-- Item 5 -->
+		<li>
+			<div class="direction-r">
+				<div class="flag-wrapper">
+					<span class="flag">Department</span>
+					<span class="time-wrapper"><span class="time">step5</span></span>
+				</div>
+				<div class="desc">Add Department Name along with courses in department</div>
+			</div>
+		</li>
+	
+		<!-- Item 6 -->
+		<li>
+			<div class="direction-l">
+				<div class="flag-wrapper">
+					<span class="flag">Section</span>
+					<span class="time-wrapper"><span class="time">step6</span></span>
+				</div>
+				<div class="desc">Add section Id along with department and number of classes in a week</div>
+			</div>
+		</li>
+		<li>
+			<div class="direction-r">
+				<div class="flag-wrapper">
+					<span class="flag">Generate</span>
+					<span class="time-wrapper"><span class="time">step7</span></span>
+				</div>
+				<div class="desc">Click on Generate button in Home page</div>
+			</div>
+		</li>
+	  
+	</ul>
+	</div>
+	  </section>
+	  
+
+</section>
+<section class = "section3">
+	<div data-aos="fade-up" data-aos-duration="1000">
+	<div>
+		<h2>Features</h2>
+	</div>
+		<div class="container3">
+		  <div class="card">
+			<h3 class="title">Student Friendly</h3>
+			<div class="bar">
+			  <div class="emptybar"></div>
+			  <div class="filledbar"></div>
+			</div>
+			<div class="circle">
+				<p class="featurecards">Every subject is alloted exactly as many hours as required.</p>
+			  <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+			  <circle class="stroke" cx="60" cy="60" r="50"/>
+			</svg> -->
+			</div>
+		  </div>
+		  <div class="card">
+			<h3 class="title">Teacher Friendly</h3>
+			<div class="bar">
+			  <div class="emptybar"></div>
+			  <div class="filledbar"></div>
+			</div>
+			<div class="circle">
+				<p class="featurecards">It is taken care that every teacher is given more or less same load.</p>
+			  <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+				
+			  <circle class="stroke" cx="60" cy="60" r="50"/>
+			  
+			</svg> -->
+			</div>
+		  </div>
+		  
+		  <div class="card">
+			<h3 class="title">Fully Online</h3>
+			<div class="bar">
+			  <div class="emptybar"></div>
+			  <div class="filledbar"></div>
+			</div>
+			<div class="circle">
+				<p class="featurecards">This is fully online software and no download is required.</p>
+			</div>
+		  </div>
+		  <div class="card">
+			<h3 class="title">User Friendly Interface</h3>
+			<div class="bar">
+			  <div class="emptybar"></div>
+			  <div class="filledbar"></div>
+			</div>
+			<div class="circle">
+				<p class="featurecards">This is extremely easy to use software and anyone with basic knowledge of computer can use it.</p>
+			</div>
+		  </div>
+		  <div class="card">
+			<h3 class="title">Amazing Support</h3>
+			<div class="bar">
+			  <div class="emptybar"></div>
+			  <div class="filledbar"></div>
+			</div>
+			<div class="circle">
+				<p class="featurecards">We provide technical and non-technical support at any step you are stuck.</p>
+			  <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+			  <circle class="stroke" cx="60" cy="60" r="50"/>
+			</svg> -->
+			</div>
+		  </div>
+
+		  <!-- <div class="card">
+			<h3 class="title">Pdf Download</h3>
+			<div class="bar">
+			  <div class="emptybar"></div>
+			  <div class="filledbar"></div>
+			</div>
+			<div class="circle">
+				<p class="featurecards">The final time table is available in pdf format and ready to print design.</p>
+			  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+			  <circle class="stroke" cx="60" cy="60" r="50"/>
+			</svg>
+			</div>
+		  </div> -->
+		  
+		</div>
+	</div>
+</section>
+
+<section class="contact">
+	<div class = "contactcard" data-aos="fade-left" data-aos-duration="1000">
+		<div class="contact_heading">
+			<h2>CONTACT US</h2>
+		</div>
+		<form>
+			
+			<div class="form-group">
+			  <label for="exampleFormControlInput1" class="formlabel">Full Name</label>
+			  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Fullname">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlInput1" class="formlabel">Email address</label>
+				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			  </div>
+			
+			<div class="form-group">
+			  <label for="exampleFormControlTextarea1" class="formlabel">Message</label>
+			  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+		  </form>
+		  <div class="contact-submit">
+			<button type="button" class="btn btn-dark">Submit</button>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+

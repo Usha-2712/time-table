@@ -1,0 +1,51 @@
+<!-- ADD AND EDIT ROOM PAGE -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<section class="body1">
+    <fieldset class="fieldset">
+        <a href="{% url 'addroom'%}"><h1 class="tablink" onclick="openPage('new')" id="defaultOpen">Add Room</h1></a>
+        <h1 class="tablink" onclick="openPage('edit')" id="link_to_edit">Edit Rooms</h1>
+            <div class="tabcontent" id="edit">
+            <table class="table1">
+                <thead>
+                <tr class="table-headers">
+                <th>Room No.</th>
+                <th>Seating Capacity</th>
+                <th  class="empty"></th>
+                </tr>
+                </thead>
+    
+                <tbody>
+                {% for rm in rooms %}
+                <tr>
+                 <td class="room_number">{{rm.r_number}}</td>
+                 <td>{{rm.seating_capacity}}</td>
+                 <td class="empty">
+                    <form action="{% url 'deleteroom' rm.id %}" method="post">
+                            {% csrf_token %}
+                            <!-- <input type="submit" value="X" class="cross"> -->
+                            <button class="button1"><i class="fa fa-trash-o"></i></button>
+                    </form>
+                 </td>
+                 </tr>
+                {% endfor %}
+                </tbody>
+    
+            </table>
+        </div>
+    </fieldset>
+</section>
+
+
+<!-- <div class="img">
+	<img src="{% static 'img/bench3.png' %}">
+</div>
+<div class="img2">
+	<img src="{% static 'img/bench2.png' %}">
+</div> -->
+
+{% endblock %}

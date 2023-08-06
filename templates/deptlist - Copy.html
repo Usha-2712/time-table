@@ -1,0 +1,45 @@
+<!-- ADD AND EDIT DEPARTMENT PAGE -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<section class="body1">
+    <fieldset class="fieldset">
+        <a href="{% url 'adddepartment'%}"><h1 class="tablink" onclick="openPage('new')" id="defaultOpen">Add Department</h1></a>
+        <h1 class="tablink" onclick="openPage('edit')" id="link_to_edit">Edit Department</h1>
+            <div class="tabcontent" id="edit">
+            <table class="table1">
+                <thead>
+                <tr class="table-headers">
+                <th>Department</th>
+                <th  class="empty"></th>
+                </tr>
+                </thead>
+    
+                <tbody>
+                {% for dept in departments %}
+                <tr>
+                 <td>{{dept.dept_name}}</td>
+                 <td class="empty">
+                    <form action="{% url 'deletedepartment' dept.id %}" method="post">
+                            {% csrf_token %}
+                            <!-- <input type="submit" value="X" class="cross"> -->
+                            <button class="button1"><i class="fa fa-trash-o"></i></button>
+                    </form>
+                 </td>
+                 </tr>
+                {% endfor %}
+                </tbody>
+    
+            </table>
+        </div>
+    </fieldset>
+</section>
+
+<!-- <div class="img">
+
+</div> -->
+
+{% endblock %}
